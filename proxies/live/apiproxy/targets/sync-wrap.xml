@@ -24,8 +24,8 @@
     </Request>
   </PreFlow>
   <LocalTargetConnection>
-    <APIProxy>sync-wrap</APIProxy>
+    <APIProxy>sync-wrap-{{ APIGEE_ENVIRONMENT }}</APIProxy>
     <ProxyEndpoint>default</ProxyEndpoint>
-    <Path>/sync-wrap/{{ SERVICE_BASE_PATH }}</Path>
+    <Path>/sync-wrap{{ SERVICE_BASE_PATH }}</Path>
   </LocalTargetConnection>
 </TargetEndpoint>
