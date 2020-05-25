@@ -19,11 +19,11 @@
         <Condition>request.verb == "OPTIONS" AND request.header.origin != null AND request.header.Access-Control-Request-Method != null</Condition>
     </RouteRule>
     <RouteRule name="sync-wrap">
-      <Condition>request.verb = "PATCH" and request.header.prefer != "respond-async"</Condition>
+      <Condition>request.verb = "PATCH" and request.header.prefer != "respond-async" and request.header.x-sync-wrapped != "true"</Condition>
       <TargetEndpoint>sync-wrap</TargetEndpoint>
     </RouteRule>
     <RouteRule name="ig3">
-      <Condition>request.verb != "PATCH" or request.header.prefer = "respond-async"</Condition>
+      <Condition>request.verb != "PATCH" or request.header.prefer = "respond-async" or request.header.x-sync-wrapped = "true"</Condition>
       <TargetEndpoint>ig3</TargetEndpoint>
     </RouteRule>
 </ProxyEndpoint>
