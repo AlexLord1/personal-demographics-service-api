@@ -4,8 +4,12 @@ dist/
 build/
 public/
 newman/
-.idea/
+build/
+.idea
+.DS_Store
+venv
 
+*.orig
 .#*
 
 __pycache__/
